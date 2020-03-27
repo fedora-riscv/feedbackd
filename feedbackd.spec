@@ -77,5 +77,5 @@ developing applications that use %{name}.
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
-* Sat Feb 29 2020 Nikhil Jha <hi@nikhiljha.com> - 0.0.0+git20200304-1
+* Sat Feb 29 2020 Nikhil Jha <hi@nikhiljha.com> - 0.0.0+git20200305-1
 - Initial packaging
