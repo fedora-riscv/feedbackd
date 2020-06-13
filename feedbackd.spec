@@ -1,5 +1,5 @@
 Name:           feedbackd
-Version:        0.0.0+git20200305
+Version:        0.0.0+git20200527
 Release:        1%{?dist}
 Summary:        Feedback library for GNOME
 
@@ -77,5 +77,8 @@ developing applications that use %{name}.
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
+* Fri Jun 12 2020 Torrey Sorensen <sorensentor@tuta.io> - 0.0.0+git20200527-1
+- Update to 0.0.0+git20200527
+
 * Sat Feb 29 2020 Nikhil Jha <hi@nikhiljha.com> - 0.0.0+git20200305-1
 - Initial packaging
