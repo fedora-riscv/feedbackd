@@ -1,6 +1,6 @@
 Name:           feedbackd
 Version:        0.0.0+git20200527
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Feedback library for GNOME
 
 License:        GPLv3+
@@ -17,6 +17,7 @@ BuildRequires:  pkgconfig(gsound)
 BuildRequires:  pkgconfig(gudev-1.0) >= 232
 BuildRequires:  pkgconfig(json-glib-1.0)
 BuildRequires:  gobject-introspection-devel
+BuildRequires:  systemd-devel
 BuildRequires:  vala
 BuildRequires:  vala-tools
 BuildRequires:  dbus-daemon
@@ -48,6 +49,7 @@ developing applications that use %{name}.
 
 %install
 %meson_install
+install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedbackd.rules
 
 
 %check
@@ -59,6 +61,7 @@ developing applications that use %{name}.
 %{_libdir}/girepository-1.0/Lfb-0.0.typelib
 %{_libdir}/libfeedback-0.0.so.0
 %{_libexecdir}/feedbackd
+%{_udevrulesdir}/90-feedbackd.rules
 %{_datadir}/dbus-1/interfaces/org.sigxcpu.Feedback.xml
 %{_datadir}/dbus-1/services/org.sigxcpu.Feedback.service
 %{_datadir}/feedbackd
@@ -77,6 +80,9 @@ developing applications that use %{name}.
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
+* Tue Jul 14 2020 Peter Robinson <pbrobinson@fedoraproject.org> - 0.0.0+git20200527-2
+- Install udev rules
+
 * Fri Jun 12 2020 Torrey Sorensen <sorensentor@tuta.io> - 0.0.0+git20200527-1
 - Update to 0.0.0+git20200527
 
