@@ -1,6 +1,6 @@
 Name:           feedbackd
-Version:        0.0.0+git20200527
-Release:        2%{?dist}
+Version:        0.0.0+git20200707
+Release:        1%{?dist}
 Summary:        Feedback library for GNOME
 
 License:        GPLv3+
@@ -61,6 +61,7 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 %{_libdir}/girepository-1.0/Lfb-0.0.typelib
 %{_libdir}/libfeedback-0.0.so.0
 %{_libexecdir}/feedbackd
+%{_libexecdir}/fbd-ledctrl
 %{_udevrulesdir}/90-feedbackd.rules
 %{_datadir}/dbus-1/interfaces/org.sigxcpu.Feedback.xml
 %{_datadir}/dbus-1/services/org.sigxcpu.Feedback.service
@@ -80,6 +81,9 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
+* Tue Jul 14 2020 Peter Robinson <pbrobinson@fedoraproject.org> - 0.0.0+git20200707-1
+- Update to v0.0.0+git20200707
+
 * Tue Jul 14 2020 Peter Robinson <pbrobinson@fedoraproject.org> - 0.0.0+git20200527-2
 - Install udev rules
 
