@@ -1,5 +1,5 @@
 Name:           feedbackd
-Version:        0.0.0+git20200714
+Version:        0.0.0+git20200726
 Release:        2%{?dist}
 Summary:        Feedback library for GNOME
 
@@ -86,6 +86,9 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
+* Fri Aug 14 2020 Torrey Sorensen <sorensentor@tuta.io> - 0.0.0+git20200726-1
+- Update to v0.0.0+git20200726
+
 * Mon Jul 27 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.0.0+git20200714-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
