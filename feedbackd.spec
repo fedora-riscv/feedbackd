@@ -1,6 +1,6 @@
 Name:           feedbackd
 Version:        0.0.0+git20200726
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        Feedback library for GNOME
 
 License:        GPLv3+
