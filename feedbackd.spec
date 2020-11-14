@@ -1,5 +1,5 @@
 Name:           feedbackd
-Version:        0.0.0+git20200726
+Version:        0.0.0+git20201114
 Release:        1%{?dist}
 Summary:        Feedback library for GNOME
 
@@ -86,6 +86,9 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
+* Sat Nov 14 2020 Torrey Sorensen <sorensentor@tuta.io> - 0.0.0+git20201114-1
+- Update to v0.0.0+git20201114
+
 * Fri Aug 14 2020 Torrey Sorensen <sorensentor@tuta.io> - 0.0.0+git20200726-1
 - Update to v0.0.0+git20200726
 
