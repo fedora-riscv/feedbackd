@@ -1,6 +1,6 @@
 Name:           feedbackd
 Version:        0.0.0+git20210426
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Feedback library for GNOME
 
 License:        GPLv3+
@@ -86,6 +86,9 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
+* Wed Jul 21 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.0.0+git20210426-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Tue Apr 27 2021 Torrey Sorensen <torbuntu@fedoraproject.org> - 0.0.0+git20210426-1
 - Update to v0.0.0+git20210426
 
