@@ -1,6 +1,6 @@
 Name:           feedbackd
 Version:        0.0.0+git20210426
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Feedback library for GNOME
 
 License:        GPLv3+
@@ -19,7 +19,6 @@ BuildRequires:  pkgconfig(json-glib-1.0)
 BuildRequires:  gobject-introspection-devel
 BuildRequires:  systemd-devel
 BuildRequires:  vala
-BuildRequires:  vala-tools
 BuildRequires:  dbus-daemon
 Requires: lib%{name}%{?_isa} = %{version}-%{release}
 
@@ -86,6 +85,9 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
+* Mon Aug 23 2021 Kalev Lember <klember@redhat.com> - 0.0.0+git20210426-3
+- BR vala instead of vala-tools
+
 * Wed Jul 21 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.0.0+git20210426-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
