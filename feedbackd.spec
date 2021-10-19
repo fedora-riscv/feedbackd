@@ -1,6 +1,6 @@
 Name:           feedbackd
-Version:        0.0.0+git20210426
-Release:        3%{?dist}
+Version:        0.0.0+git20211018
+Release:        1%{?dist}
 Summary:        Feedback library for GNOME
 
 License:        GPLv3+
@@ -85,6 +85,9 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 %{_libdir}/pkgconfig/libfeedback-0.0.pc
 
 %changelog
+* Tue Oct 19 2021 Torrey Sorensen <torbuntu@fedoraproject.org> - 0.0.0+git20211018-1
+- Update to 0.0.0git20211018
+
 * Mon Aug 23 2021 Kalev Lember <klember@redhat.com> - 0.0.0+git20210426-3
 - BR vala instead of vala-tools
 
