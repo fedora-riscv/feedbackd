@@ -1,0 +1,12 @@
+diff --git a/src/meson.build b/src/meson.build
+index 9a30fada749f427a8fd106d11f34c928b5ace351..a75cf6d74663c0054df684376ea3e92b9a336025 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -57,6 +57,7 @@ fbd_lib = static_library(
+ )
+ 
+ fbd_dep = declare_dependency(
++  sources: generated_dbus_sources,
+   include_directories : fbd_inc,
+   link_with : fbd_lib,
+   dependencies : fbd_deps,
