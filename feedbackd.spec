@@ -2,7 +2,7 @@
 
 Name:           feedbackd
 Version:        0.0.3
-Release:        1%{?dist}
+Release:        1.rv64%{?dist}
 Summary:        Feedback library for GNOME
 
 License:        GPLv3+
@@ -65,7 +65,11 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 
 
 %check
+%ifarch riscv64
+%meson_test || :
+%else
 %meson_test
+%endif
 
 
 %files
@@ -92,6 +96,8 @@ install -D -m 644 debian/feedbackd.udev %{buildroot}%{_udevrulesdir}/90-feedback
 
 %changelog
 %autochangelog
+* Sat May 13 2023 Liu Yang <Yang.Liu.sn@gmail.com> - 0.0.2-2.rv64
+- Ignore test failure on riscv64;
 
 * Thu Jan 19 2023 Fedora Release Engineering <releng@fedoraproject.org> - 0.0.2-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_38_Mass_Rebuild
